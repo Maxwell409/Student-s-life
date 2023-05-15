@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
-    private static int estination;
+    [SerializeField] TextMeshProUGUI text;
 
-    [SerializeField] GameObject panel;
-    [SerializeField] Text text;
-
-    public void ShowEstimation()
+    public void ShowEstimation(int estimation)
     {
-        panel.SetActive(true);
+        gameObject.SetActive(true);
+        text.text = "Ваша оценка: " + estimation;
     }
 }
