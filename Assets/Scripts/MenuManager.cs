@@ -10,9 +10,9 @@ public class MenuManager : MonoBehaviour
         gameObject.SetActive(!gameObject.activeSelf);
     }
 
-    public void SceneLoader(string name)
+    public void SceneLoader(int index)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(index);
     }
 
     public void Exit()

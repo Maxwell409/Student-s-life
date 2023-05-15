@@ -10,6 +10,12 @@ public class JellyUnite : MonoBehaviour
     [SerializeField] private GameObject buttonMix;
     [SerializeField] private GameObject buttonCold;
 
+    [SerializeField] private Material[] materials;
+
+    private int gelatinCount = 0;
+    private int cupCount = 0;
+    private int juiceCount = 0;
+
     private bool layer0Check;
     public bool Layer0Check
     {
@@ -24,10 +30,10 @@ public class JellyUnite : MonoBehaviour
     private bool layer1Check;
     public bool Layer1Check
     {
-        get { return layer0Check; }
+        get { return layer1Check; }
         set
         {
-            layer0Check = value;
+            layer1Check = value;
             planes[1].SetActive(value);
         }
     }
@@ -35,94 +41,79 @@ public class JellyUnite : MonoBehaviour
     private bool layer2Check;
     public bool Layer2Check
     {
-        get { return layer0Check; }
+        get { return layer2Check; }
         set
         {
-            layer0Check = value;
+            layer2Check = value;
             planes[2].SetActive(value);
         }
     }
 
-    private int ingredientÑounter = 0;
-
-    [SerializeField] private Material[] materials;
-
-    //private void PlanesActivator(Material material1, Material material2, Material material3, Material material4)
-    //{
-    //    if (planesCheck[0])
-    //    {
-    //        if (planesCheck[1])
-    //        {
-    //            if (planesCheck[2])
-    //            {
-    //                planesCheck[3] = true;
-    //                planes[3].SetActive(true);
-    //                planes[3].GetComponent<Renderer>().material = material;
-    //                return;
-    //            }
-
-    //            planesCheck[2] = true;
-    //            planes[2].SetActive(true);
-    //            planes[2].GetComponent<Renderer>().material = material;
-    //            return;
-    //        }
-
-    //        planesCheck[1] = true;
-    //        planes[1].SetActive(true);
-    //        planes[1].GetComponent<Renderer>().material = material;
-    //        return;
-    //    }
-    //    else
-    //    {
-    //        planesCheck[0] = true;
-    //        planes[0].SetActive(true);
-    //        planes[0].GetComponent<Renderer>().material = material;
-    //    }
-    //}
-
-    public void DyeMethod(string name)
+    private int ingredientÑounter;
+    public int IngredientÑounter
     {
-        switch (name) // áàã: ñ íåïğàâèëüíûì ïîğÿäêîì íå äàåò öâåò
+        get { return ingredientÑounter; }
+        set
         {
-            case "Gelatin":
-                if (ingredientÑounter == 0)
-                    planes[ingredientÑounter].GetComponent<Renderer>().material = materials[0];
-                JellyColor();
-                ingredientÑounter++;
-                break;
-
-            case "Cup":
-                if (ingredientÑounter <= 1)
-                    planes[ingredientÑounter].GetComponent<Renderer>().material = materials[1];
-                JellyColor();
-                ingredientÑounter++;
-                break;
-
-            case "Juice":
-                if (ingredientÑounter <= 2)
-                    planes[ingredientÑounter].GetComponent<Renderer>().material = materials[2];
-                JellyColor();
-                ingredientÑounter++;
-                break;
+            ingredientÑounter = value;
+            if (value > 3)
+                ButtonEnd.Estimation--;
         }
     }
 
-    private void JellyColor()
+
+    public void DyeMethod(string name)
     {
-        switch (ingredientÑounter)
+        switch (IngredientÑounter)
         {
             case 0:
                 Layer0Check = true;
+                JellyColor(0, name);
                 break;
 
             case 1:
                 Layer1Check = true;
+                JellyColor(1, name);
                 break;
 
             case 2:
                 Layer2Check = true;
-                buttonCold.SetActive(true); 
+                JellyColor(2, name);
+                buttonCold.SetActive(true);
                 buttonMix.SetActive(true);
+                break;
+        }
+    }
+
+    private void JellyColor(int indexLayer, string name)
+    {
+        switch (name) // áàã: ñ íåïğàâèëüíûì ïîğÿäêîì íå äàåò öâåò
+        {
+            case "Gelatin":
+                planes[indexLayer].GetComponent<Renderer>().material = materials[0];
+                IngredientÑounter++;
+                gelatinCount++;
+                ButtonEnd.Estimation++;
+                if (gelatinCount > 1)
+                    ButtonEnd.Estimation -= 2;
+                break;
+
+            case "Cup":
+                planes[indexLayer].GetComponent<Renderer>().material = materials[1];
+                IngredientÑounter++;
+                cupCount++;
+                ButtonEnd.Estimation++;
+                if (cupCount > 1)
+                    ButtonEnd.Estimation -= 2;
+                break;
+
+            case "Juice":
+                planes[indexLayer].GetComponent<Renderer>().material = materials[2];
+                IngredientÑounter++;
+                juiceCount++;
+                ButtonEnd.Estimation++;
+                if (juiceCount > 1)
+                    ButtonEnd.Estimation -= 2;
                 break;
         }
     }

@@ -1188,10 +1188,10 @@ RectTransform:
   m_Father: {fileID: 1697512789}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 34.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.31885192, y: 0.5}
+  m_AnchorMax: {x: 0.69714814, y: 0.62928814}
+  m_AnchoredPosition: {x: -0.070129395, y: -1.0635071}
+  m_SizeDelta: {x: 1.5144958, y: 0.92349243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695948996
 MonoBehaviour:
@@ -1374,11 +1374,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1802494681}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SceneLoader
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: ConfectionerJelly
           m_BoolArgument: 0
@@ -1456,10 +1456,10 @@ RectTransform:
   m_Father: {fileID: 1697512789}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 87.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.31885192, y: 0.72247463}
+  m_AnchorMax: {x: 0.69714814, y: 0.8607388}
+  m_AnchoredPosition: {x: 0.4298706, y: 0.8317108}
+  m_SizeDelta: {x: 0.51449585, y: -3.0765076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760381775
 MonoBehaviour:
@@ -1642,11 +1642,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1802494681}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SceneLoader
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: ConfectionerTest
           m_BoolArgument: 0
@@ -1978,11 +1978,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1802494681}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SceneLoader
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: ConfectionerCake
           m_BoolArgument: 0
@@ -2330,10 +2330,10 @@ RectTransform:
   m_Father: {fileID: 1697512789}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -19.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.31885192, y: 0.26000002}
+  m_AnchorMax: {x: 0.69714814, y: 0.39588138}
+  m_AnchoredPosition: {x: -0.070129395, y: -2.3847046}
+  m_SizeDelta: {x: 1.5144958, y: -2.0765076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493255956
 MonoBehaviour:
@@ -2572,8 +2572,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1a8fb0d284319bf4abb748e817309cf8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

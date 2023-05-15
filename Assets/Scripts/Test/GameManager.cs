@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private EndGame endGameScript;
+    [SerializeField]private EndGame endGameScript;
 
     private void Awake()
     {
-        endGameScript = GameObject.Find("EndPanel").GetComponent<EndGame>();
-        endGameScript.gameObject.SetActive(false);
+
     }
     private static int estimation = 5;
     public static int Estimation

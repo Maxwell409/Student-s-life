@@ -9,5 +9,6 @@ public class JellyMix : MonoBehaviour
     public void MixActivator()
     {
         Mixer.SetActive(true);
+        ButtonEnd.Estimation++;
     }
 }
