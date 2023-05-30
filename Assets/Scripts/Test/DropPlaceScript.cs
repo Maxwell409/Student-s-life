@@ -12,7 +12,9 @@ public class DropPlaceScript : MonoBehaviour, IDropHandler
     {
         CardScript card = eventData.pointerDrag.GetComponent<CardScript>();
         if (card)
+        {
             card.defaultParent = transform;
+        }
 
         if (ThePlaceFor == eventData.pointerDrag.gameObject.name)
             CardCheck = true;

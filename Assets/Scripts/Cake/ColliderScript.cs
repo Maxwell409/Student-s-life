@@ -13,7 +13,6 @@ public class ColliderScript : MonoBehaviour
         if (other.name == nameObj)
         {
             filledIn = true;
-            print("filledIn = true;");
         }
     }
 }

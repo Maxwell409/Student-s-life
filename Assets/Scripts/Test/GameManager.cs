@@ -7,10 +7,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private EndGame endGameScript;
 
-    private void Awake()
-    {
-
-    }
     private static int estimation = 5;
     public static int Estimation
     {
