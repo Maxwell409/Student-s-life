@@ -41,35 +41,6 @@ public class TablesManager : MonoBehaviour
             }
             print(dropPlaceScripts2[i].CardCheck);
         }
-
-        //foreach (var dropPlaceScript in dropPlaceScripts)
-        //{
-        //    if (dropPlaceScript.CardCheck)
-        //    {
-        //        GameManager.Estimation--;
-        //        break;
-        //    }
-        //    print(dropPlaceScript.CardCheck);
-        //}
-        //foreach (var dropPlaceScript in dropPlaceScripts1)
-        //{
-        //    if (dropPlaceScript.CardCheck)
-        //    {
-        //        GameManager.Estimation--;
-        //        break;
-        //    }
-        //    print(dropPlaceScript.CardCheck);
-
-        //}
-        //foreach (var dropPlaceScript in dropPlaceScripts2)
-        //{
-        //    if (dropPlaceScript.CardCheck)
-        //    {
-        //        GameManager.Estimation--;
-        //        break;
-        //    }
-        //    print(dropPlaceScript.CardCheck);
-        //}
         gameManager.GameEnd();
     }
 }

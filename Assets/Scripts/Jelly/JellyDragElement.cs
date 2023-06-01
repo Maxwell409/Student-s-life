@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class JellyDragElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private Image mainImage;
+    private Image mainImage;
     /// <summary>
     /// Спрайт изображения драг элемента
     /// </summary>
